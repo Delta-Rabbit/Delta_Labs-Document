@@ -4,7 +4,7 @@ Code quality and convention documentation.
 
 ## Documents
 
-### [Complete Guide](./complete-guide.md)
+### [Complete Guide](./coding-standards.md)
 Full coding standards including naming, TypeScript, React patterns, and more.
 
 **Audience**: All developers  

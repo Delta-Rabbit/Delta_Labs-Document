@@ -20,14 +20,14 @@ This documentation covers everything you need to know about developing for Delta
 
 ### For New Developers
 1. Read the [Project Analysis](./01-overview/project-analysis.md)
-2. Review the [Separation Guide](./SEPARATION_GUIDE.md)
+2. Review the [Separation Guide](./separation-guide.md)
 3. Explore the sections that apply to your role
 
 ### For Designers
-Start with the [Design System](./02-design-system/complete-guide.md)
+Start with the [Design System](./02-design-system/design-system.md)
 
 ### For Developers
-Check out [Coding Standards](./03-coding-standards/complete-guide.md) and [Templates](./04-templates/complete-guide.md)
+Check out [Coding Standards](./03-coding-standards/coding-standards.md) and [Templates](./04-templates/templates.md)
 
 ## 📖 Documentation Structure
 

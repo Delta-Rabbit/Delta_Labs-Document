@@ -7,7 +7,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'Delta Labs Documentation',
   tagline: 'Official coding standards and design system documentation',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.png',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -78,7 +78,7 @@ const config: Config = {
       title: 'Delta Labs',
       logo: {
         alt: 'Delta Labs Logo',
-        src: 'img/logo.svg',
+        src: 'img/logo.png',
       },
       items: [
         {
