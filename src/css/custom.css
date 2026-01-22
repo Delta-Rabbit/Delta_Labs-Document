@@ -1,29 +1,52 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  /* Primary Color: #174A5F */
+  --ifm-color-primary: #174A5F;
+  --ifm-color-primary-dark: #144255;
+  --ifm-color-primary-darker: #133f51;
+  --ifm-color-primary-darkest: #103443;
+  --ifm-color-primary-light: #1a5269;
+  --ifm-color-primary-lighter: #1b566e;
+  --ifm-color-primary-lightest: #20617d;
+  
+  /* Secondary Color: #DCE5E9 */
+  --ifm-color-secondary: #DCE5E9;
+
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  /* Global Font */
+  --ifm-font-family-base: 'Outfit', sans-serif;
+  --ifm-heading-font-family: 'Outfit', sans-serif;
+}
+
+/* Global Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Modern Selection */
+::selection {
+  background: var(--ifm-color-primary-light);
+  color: white;
 }
 
 /* For readability, improve dark mode contrast */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  /* Lighter Teal for Dark Mode Contrast */
+  --ifm-color-primary: #5AB3D5;
+  --ifm-color-primary-dark: #44A9CF;
+  --ifm-color-primary-darker: #39A4CC;
+  --ifm-color-primary-darkest: #2895BD;
+  --ifm-color-primary-light: #70BDDB;
+  --ifm-color-primary-lighter: #7BC1DE;
+  --ifm-color-primary-lightest: #9CCCCF;
+  
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
