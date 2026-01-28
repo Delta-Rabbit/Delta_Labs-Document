@@ -1,46 +1,50 @@
-# Delta Labs Documentation Structure
+<!-- # Delta Labs Documentation Structure -->
 
 > **Guide for creating professional online documentation**
 
 ---
 
-## 📁 Folder Structure
+## 📁 Folder Structure (Current)
+
+> **Source of truth**: This tree matches the live docs. See also [Welcome](/docs/intro) for quick start.
 
 ```
 docs/
-│
-├── README.md                          # Master index (you are here)
+├── intro.md                           # Entry point
+├── separation-guide.md                # Design vs Coding — what goes where
+├── structure-guide.md                 # This guide
 │
 ├── 01-overview/                       # PROJECT OVERVIEW
-│   ├── project-analysis.md           # Complete project breakdown
-│   └── getting-started.md            # Quick start guide
+│   ├── overview.md                   # Section hub
+│   └── project-analysis.md           # Complete project breakdown
 │
-├── 02-design-system/                  # DESIGN SYSTEM (UI/UX)
-│   ├── 01-overview.md                # Design system introduction
-│   ├── 02-atomic-design.md           # Component hierarchy
-│   ├── 03-component-library.md       # Component organization
-│   ├── 04-layouts.md                 # Layout components
-│   └── 05-variants.md                # Variant management
+├── 02-design-system/                 # DESIGN SYSTEM (UI/UX)
+│   ├── design-intro.md               # Section hub
+│   ├── design-system.md              # Component library, atomic design, layouts
+│   ├── design-tokens.md              # Colors, typography, spacing, tokens
+│   └── api-standards.md              # REST, auth, DataContext, rate limiting
 │
-├── 03-coding-standards/               # CODING STANDARDS (Code Quality)
-│   ├── 01-overview.md                # Standards introduction
-│   ├── 02-file-structure.md          # File organization
-│   ├── 03-naming.md                  # Naming conventions
-│   ├── 04-typescript.md              # TypeScript standards
-│   ├── 05-react-patterns.md          # React best practices
-│   ├── 06-state-management.md        # Context/State patterns
-│   ├── 07-routing.md                 # Routing standards
-│   ├── 08-styling.md                 # Styling guidelines
-│   ├── 09-imports.md                 # Import/Export rules
-│   ├── 10-documentation.md           # Code documentation
-│   └── 11-error-handling.md          # Error handling
+├── 03-coding-standards/              # CODING STANDARDS (Code Quality)
+│   ├── standards-intro.md            # Section hub
+│   └── coding-standards.md          # Naming, TypeScript, React, structure, etc.
 │
-└── 04-templates/                      # CODE TEMPLATES
-    ├── 01-components.md              # Component templates
-    ├── 02-contexts.md                # Context templates
-    ├── 03-hooks.md                   # Hook templates
-    ├── 04-types.md                   # Type templates
-    └── 05-modules.md                 # Module templates
+├── 04-templates/                     # CODE TEMPLATES
+│   ├── templates-intro.md            # Section hub
+│   └── templates.md                  # Component, context, hook, type templates
+│
+├── 05-architecture/                  # ARCHITECTURE
+│   ├── architecture-intro.md         # Section hub
+│   ├── ai-routing.md                 # AI routing, BotChat, events
+│   ├── system-layers.md              # Layers, responsibilities
+│   └── data-flow.md                 # DataContext, update_data, tables
+│
+├── 06-api-reference/                 # API REFERENCE
+│   ├── api-reference-intro.md        # Section hub
+│   └── api-reference.md              # Endpoints, auth, rate limits, modules
+│
+└── 07-best-practices/                # BEST PRACTICES
+    ├── best-practices-intro.md       # Section hub
+    └── best-practices.md             # Frontend, backend, security, testing
 ```
 
 ---
@@ -70,6 +74,24 @@ docs/
 **Content**: Copy-paste templates, examples  
 **Focus**: Speed up development
 
+### 05-architecture/
+**Purpose**: System design, AI routing, data flow  
+**Audience**: Backend and frontend developers  
+**Content**: AI routing, layers, DataContext, update_data  
+**Focus**: How the stack fits together
+
+### 06-api-reference/
+**Purpose**: Backend API contract  
+**Audience**: Backend and frontend developers  
+**Content**: Endpoints, auth, rate limits, module types  
+**Focus**: Implement and consume APIs correctly
+
+### 07-best-practices/
+**Purpose**: Cross-cutting patterns  
+**Audience**: All developers  
+**Content**: Frontend/backend/security/testing, code style  
+**Focus**: Complements Coding Standards and Design System
+
 ---
 
 ## 🔗 Document Relationships
@@ -80,10 +102,13 @@ Each document has ONE clear purpose:
 
 | Document Type | Covers | Does NOT Cover |
 |---------------|--------|----------------|
-| **Design System** | Component structure, UI patterns, layouts, variants | Code syntax, naming, TypeScript |
+| **Overview** | Project structure, modules, tech stack | Implementation details |
+| **Design System** | Component structure, tokens, layouts, API standards | Code syntax, naming, TypeScript |
 | **Coding Standards** | Code quality, naming, TypeScript, file organization | UI design, component structure |
 | **Templates** | Ready-to-use code | Explanations, theory |
-| **Overview** | Project structure, architecture | Implementation details |
+| **Architecture** | AI routing, layers, data flow | Specific endpoints, code patterns |
+| **API Reference** | Endpoints, auth, rate limits, module types | Conventions, DataContext patterns |
+| **Best Practices** | Frontend/backend/security/testing patterns | Syntax, file structure (see Coding Standards) |
 
 ---
 
@@ -195,7 +220,7 @@ Every document should have:
 ### 3. Cross-Referencing
 Link related documents:
 ```markdown
-See also: [Component Library](../design-system/component-library.md)
+See also: [Design System](/docs/design-system/design-system)
 ```
 
 ### 4. Version Control

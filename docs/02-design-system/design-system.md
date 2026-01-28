@@ -1,3 +1,7 @@
+---
+sidebar_position: 2
+---
+
 # Delta Labs - Design System & Component Library Standards
 
 > **Version**: 1.0.0  
@@ -854,9 +858,19 @@ export const VARIANT_COMBINATIONS = {
 
 ## 8. Component Documentation
 
-### 8.1 README.md Template
+### 8.1 Documentation in This Site (Component Catalog)
 
-Every component MUST have a README.md:
+When you design and ship a component in Delta Labs, **add its documentation here** in the docs site:
+
+- **Where**: [Component Catalog](/docs/design-system/components/component-catalog) under Design System.
+- **What**: One doc per component (e.g. `button.md`, `modal.md`) with purpose, props, variants, examples, when to use.
+- **How**: Use the [component doc template](/docs/design-system/components/component-doc-template) and add a row to the catalog index.
+
+The Component Catalog is the single place for all component docs that designers and developers use. Keep it in sync when you add or change components.
+
+### 8.2 README.md in the Repo
+
+Every component MUST also have a README.md in its folder in the Delta Labs codebase:
 
 ```markdown
 # [ComponentName]

@@ -1,4 +1,4 @@
-# Design System vs Coding Standards - Clear Separation
+<!-- # Design System vs Coding Standards - Clear Separation -->
 
 > **Quick Reference**: What goes where
 
@@ -186,14 +186,14 @@
 
 ```markdown
 <!-- In Design System -->
-For implementation details, see [TypeScript Standards](../coding-standards/typescript.md)
+For implementation details, see [TypeScript Standards](/docs/coding-standards/coding-standards#4-typescript-standards)
 ```
 
 ### When Coding Standards References Design System
 
 ```markdown
 <!-- In Coding Standards -->
-For component structure, see [Component Library](../design-system/component-library.md)
+For component structure, see [Design System — Component Library](/docs/design-system/design-system#2-component-library-structure)
 ```
 
 ---

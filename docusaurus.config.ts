@@ -15,17 +15,30 @@ const config: Config = {
   },
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  // Update this after Vercel deployment with your actual Vercel URL
+  url: 'https://delta-labs-docs.vercel.app',
   // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
+  // For Vercel, use '/' (root)
   baseUrl: '/',
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'Delta-Labs', // Usually your GitHub org/user name.
-  projectName: 'delta-labs-docs', // Usually your repo name.
+  // GitHub pages deployment config (if using GitHub Pages)
+  organizationName: 'Delta-Rabbit', // Your GitHub org/user name
+  projectName: 'Delta_Labs-Document', // Your GitHub repo name
 
   onBrokenLinks: 'warn',
+
+  plugins: [
+    [
+      require.resolve('@cmfcmf/docusaurus-search-local'),
+      {
+        indexDocs: true,
+        indexBlog: true,
+        indexPages: false,
+        language: 'en',
+        maxSearchResults: 10,
+      },
+    ],
+  ],
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -41,10 +54,9 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
+          // Edit links point to your GitHub repo
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/Delta-Rabbit/Delta_Labs-Document/tree/main/',
         },
         blog: {
           showReadingTime: true,
@@ -52,10 +64,9 @@ const config: Config = {
             type: ['rss', 'atom'],
             xslt: true,
           },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
+          // Edit links point to your GitHub repo
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/Delta-Rabbit/Delta_Labs-Document/tree/main/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -85,7 +96,7 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'docsSidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Documentation',
         },
       ],
     },
