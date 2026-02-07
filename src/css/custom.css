@@ -38,6 +38,14 @@ body {
 }
 
 /* For readability, improve dark mode contrast */
+/* Full-width architecture diagram */
+.architecture-diagram-fullwidth img {
+  width: 100% !important;
+  height: auto !important;
+  display: block !important;
+  max-width: 100%;
+}
+
 [data-theme='dark'] {
   /* Lighter Teal for Dark Mode Contrast */
   --ifm-color-primary: #5AB3D5;

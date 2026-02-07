@@ -125,5 +125,5 @@ Use the same module naming in frontend routing and context so they stay aligned 
 ## 📖 See Also
 
 - [API Standards](../02-design-system/api-standards.md) — REST, auth, and conventions.
-- [Data Flow](../05-architecture/data-flow.md) — how API data reaches the UI.
+- [Delta Labs System Architecture](../architecture/full-system-architecture) — API surface (§4.4), data flow, and data model.
 - [Project Analysis](../01-overview/project-analysis.md) — modules and contexts.

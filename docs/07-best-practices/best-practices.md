@@ -59,7 +59,7 @@ sidebar_position: 2
 ### 2.3 Database and Queries
 
 - **Indexes** — add indexes for filters, sort, and lookup fields used in queries.
-- **Pagination** — enforce a max page size and use offset/cursor consistently; see [Data Flow](../05-architecture/data-flow.md).
+- **Pagination** — enforce a max page size and use offset/cursor consistently; see [Delta Labs System Architecture](../architecture/full-system-architecture) (§4, §5).
 - **Projections** — select only needed fields to reduce payload size and DB load.
 
 ---
@@ -141,4 +141,4 @@ These align with [Coding Standards](../03-coding-standards/coding-standards.md) 
 - [Coding Standards](../03-coding-standards/coding-standards.md) — structure, naming, TypeScript, React.
 - [Design System](../02-design-system/design-system.md) — components and design tokens.
 - [API Reference](../06-api-reference/api-reference.md) — endpoints and conventions.
-- [Architecture](../05-architecture/architecture-intro.md) — layers and data flow.
+- [Architecture](../architecture/architecture-intro) — Delta Labs System Architecture (single source of truth).

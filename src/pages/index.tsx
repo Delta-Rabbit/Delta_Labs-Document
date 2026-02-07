@@ -18,7 +18,7 @@ function HomepageHeader() {
           Professional technical documentation for an AI-driven educational platform with intelligent routing, design system, and layered architecture—for developers and technical contributors.
         </p>
         <div className={styles.buttons}>
-          <Link className={styles.buttonPrimary} to="/docs/intro">
+          <Link className={styles.buttonPrimary} to="/docs/">
             Get Started &rarr;
           </Link>
           <Link className={styles.buttonSecondary} to="/docs/architecture/architecture-intro">
@@ -34,34 +34,34 @@ const FEATURES = [
   {
     title: 'AI-Driven Navigation',
     description: 'Intelligent routing and BotChat integration that guide users through the platform.',
-    to: '/docs/architecture/ai-routing',
+    to: '/docs/architecture/full-system-architecture',
     icon: '🤖',
   },
   {
     title: 'Design System & Tokens',
     description: 'Design tokens, component library, and coding standards for consistent UI.',
-    to: '/docs/design-system/design-system',
+    to: '/docs/design-system/design-intro',
     icon: '🎨',
   },
   {
     title: 'Event & State Flow',
     description: 'DataContext, aiNavigate events, and conditional rendering patterns.',
-    to: '/docs/architecture/data-flow',
+    to: '/docs/architecture/full-system-architecture',
     icon: '🔄',
   },
   {
     title: 'API & Architecture',
     description: 'API reference, system layers, and data flow documentation.',
-    to: '/docs/api-reference/api-reference-intro',
+    to: '/docs/reference/api-reference/README',
     icon: '📡',
   },
 ];
 
 const QUICK_LINKS = [
-  { label: 'Getting Started', to: '/docs/intro', desc: 'Setup and first steps' },
-  { label: 'Architecture', to: '/docs/architecture/architecture-intro', desc: 'AI routing, layers, data flow' },
-  { label: 'API Reference', to: '/docs/api-reference/api-reference-intro', desc: 'Endpoints and conventions' },
-  { label: 'Best Practices', to: '/docs/best-practices/best-practices-intro', desc: 'Frontend, backend, security' },
+  { label: 'Getting Started', to: '/docs/getting-started/introduction', desc: 'Setup and first steps' },
+  { label: 'Architecture', to: '/docs/architecture/architecture-intro', desc: 'Backend, data, AI & full system' },
+  { label: 'API Reference', to: '/docs/reference/api-reference/README', desc: 'Endpoints and conventions' },
+  { label: 'Development Standards', to: '/docs/development-standards/standards-intro', desc: 'Coding standards and practices' },
 ];
 
 export default function Home(): React.ReactElement {

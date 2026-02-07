@@ -44,7 +44,7 @@ This document defines **API-related standards** for Delta Labs: how backends exp
 - **DataContext** (or module-specific context) holds data returned by the API (e.g. course list, user profile).
 - **Update pattern**: Backend returns JSON → frontend updates context (e.g. dispatch or setState) → components that use context re-render.
 - **Loading and errors**: Keep `isLoading` and `error` in context and surface them in the UI.
-- **Caching**: Use a consistent strategy (e.g. refetch on focus, SWR, or explicit “refresh”) and align with [Data Flow](../05-architecture/data-flow.md).
+- **Caching**: Use a consistent strategy (e.g. refetch on focus, SWR, or explicit “refresh”) and align with [Delta Labs System Architecture](../architecture/full-system-architecture) (§4, §5).
 
 ---
 
@@ -76,5 +76,5 @@ When the backend drives navigation or UI via “AI” or “chat” endpoints:
 ## 📖 See Also
 
 - [API Reference](../06-api-reference/api-reference.md) — endpoints, auth, errors, rate limits.
-- [Data Flow](../05-architecture/data-flow.md) — how API data flows into the UI.
+- [Delta Labs System Architecture](../architecture/full-system-architecture) — API (§4.4) and data model (§5).
 - [Best Practices → Security](../07-best-practices/best-practices.md#3-security) — auth and input safety.

@@ -54,6 +54,21 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
+          exclude: [
+            '01-overview/**',
+            '02-design-system/**',
+            '03-coding-standards/**',
+            '04-templates/**',
+            '05-architecture/**',
+            '06-api-reference/**',
+            '07-best-practices/**',
+            '08-process/**',
+            'implementation-rules/**',
+            'intro.md',
+            'documentation-analysis.md',
+            'separation-guide.md',
+            'structure-guide.md',
+          ],
           // Edit links point to your GitHub repo
           editUrl:
             'https://github.com/Delta-Rabbit/Delta_Labs-Document/tree/main/',

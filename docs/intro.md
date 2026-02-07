@@ -24,7 +24,7 @@ This documentation covers everything you need to know about developing for Delta
 ### For New Developers
 1. Read the [Project Analysis](./01-overview/project-analysis.md)
 2. Review the [Separation Guide](./separation-guide.md)
-3. Explore [Architecture](/docs/architecture/architecture-intro) and [Best Practices](/docs/best-practices/best-practices-intro)
+3. Explore [Architecture](/docs/architecture/architecture-intro) and [Best Practices](/docs/best-practices/best-practices-intro)..
 
 ### For Designers
 Start with the [Design System](/docs/design-system/design-intro) and [Design Tokens](/docs/design-system/design-tokens)
@@ -43,7 +43,7 @@ docs/
 ├── 02-design-system/     # UI/UX, tokens, API standards
 ├── 03-coding-standards/  # Code quality
 ├── 04-templates/         # Boilerplate code
-├── 05-architecture/     # AI routing, layers, data flow
+├── 05-architecture/     # Backend, database, AI; full system architecture
 ├── 06-api-reference/    # Endpoints and conventions
 └── 07-best-practices/   # Frontend, backend, security
 ```

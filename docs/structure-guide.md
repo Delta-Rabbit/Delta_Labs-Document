@@ -33,10 +33,8 @@ docs/
 │   └── templates.md                  # Component, context, hook, type templates
 │
 ├── 05-architecture/                  # ARCHITECTURE
-│   ├── architecture-intro.md         # Section hub
-│   ├── ai-routing.md                 # AI routing, BotChat, events
-│   ├── system-layers.md              # Layers, responsibilities
-│   └── data-flow.md                 # DataContext, update_data, tables
+│   ├── architecture-intro.md        # Section hub (points to single doc)
+│   └── full-system-architecture.md  # Delta Labs System Architecture — single source of truth
 │
 ├── 06-api-reference/                 # API REFERENCE
 │   ├── api-reference-intro.md        # Section hub
@@ -75,10 +73,10 @@ docs/
 **Focus**: Speed up development
 
 ### 05-architecture/
-**Purpose**: System design, AI routing, data flow  
-**Audience**: Backend and frontend developers  
-**Content**: AI routing, layers, DataContext, update_data  
-**Focus**: How the stack fits together
+**Purpose**: System architecture (backend, data, AI; full system)  
+**Audience**: Backend, data, product, operations  
+**Content**: Backend/Database/AI design; full system (scale, security, ops)  
+**Focus**: Single source of truth for architecture
 
 ### 06-api-reference/
 **Purpose**: Backend API contract  

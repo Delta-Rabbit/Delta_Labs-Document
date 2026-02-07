@@ -19,7 +19,7 @@ sidebar_position: 99
 | **02-design-system** | UI/UX | design-intro (hub), design-system.md, design-tokens.md, api-standards.md | Components, tokens, API conventions |
 | **03-coding-standards** | Code quality | standards-intro (hub), coding-standards.md | Naming, TypeScript, React, structure |
 | **04-templates** | Boilerplate | templates-intro (hub), templates.md | Copy-paste templates |
-| **05-architecture** | System design | architecture-intro (hub), ai-routing.md, system-layers.md, data-flow.md | AI routing, layers, data flow |
+| **05-architecture** | System design | architecture-intro (hub), full-system-architecture.md (Delta Labs System Architecture) | Single source of truth for system architecture |
 | **06-api-reference** | API contract | api-reference-intro (hub), api-reference.md | Endpoints, auth, rate limits |
 | **07-best-practices** | Cross-cutting | best-practices-intro (hub), best-practices.md | Frontend/backend/security/testing |
 | **Root meta** | Guides | separation-guide.md, structure-guide.md | "What goes where"; historical structure |

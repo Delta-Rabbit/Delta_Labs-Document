@@ -1,37 +1,28 @@
 ---
+title: Overview
 sidebar_position: 1
 ---
 
 # Architecture
 
-System design, AI routing, layers, and data flow.
+One document. One source of truth.
 
-## Documents
+**[Delta Labs System Architecture](./full-system-architecture.md)** is the single authoritative reference for Delta Labs: principles, scale targets, product scope (modules and features), logical layers, frontend, backend, database (MongoDB only), AI, infrastructure, security, observability, DR/HA, glossary, implementation roadmap, and checklist.
 
-### [AI Routing & Navigation](./ai-routing.md)
-How the AI layer interprets user input and drives navigation via events and routing.
+---
 
-**Audience**: Backend and frontend developers  
-**Focus**: BotChat, aiNavigate, backend routing, event payloads
+## How to use
 
-### [System Layers](./system-layers.md)
-Layered architecture: User → AI → Backend → Frontend → Database → Components.
+- **Onboarding or design decisions:** Read [Delta Labs System Architecture](./full-system-architecture.md) from the top (principles, scope, layers) then drill into the sections you need.
+- **Frontend:** §3 Frontend + [Design System](/docs/design-system/design-intro) for tokens and components.
+- **Backend, data, API:** §4 Backend, §5 Database, §4.4 API Surface, §12.5 Implementation Roadmap.
+- **AI:** §6 AI Architecture.
+- **Scale, security, ops:** §7–11 and §12 (Related Documents, Runbooks placeholder).
 
-**Audience**: All developers, architects  
-**Focus**: Layer responsibilities, communication, scalability
+---
 
-### [Data Flow & Table Population](./data-flow.md)
-How data moves from database through API and DataContext to components.
+## Related
 
-**Audience**: Frontend and backend developers  
-**Focus**: DataContext, update_data, queries, tables
-
-## 🏗️ Overview
-
-Delta Labs uses a **layered architecture** so that:
-
-- **User input** (e.g. BotChat) is processed by the **AI layer**, which emits navigation and UI events.
-- The **backend** validates requests, talks to the database, and returns structured data.
-- The **frontend** uses **DataContext** and conditional rendering to show the right views and data.
-
-Understanding [AI Routing](./ai-routing.md), [System Layers](./system-layers.md), and [Data Flow](./data-flow.md) will help you work across the stack and extend the platform.
+- [Design System](/docs/design-system/design-intro) — tokens, theme components, usage.
+- [API Reference](/docs/api-reference/api-reference-intro) — API contract and conventions.
+- [Best Practices](/docs/best-practices/best-practices-intro) — cross-cutting patterns.
