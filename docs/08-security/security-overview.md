@@ -35,6 +35,6 @@ Trust and safety: how we approach security. Security docs are credibility.
 ## 📖 See Also
 
 - [Authentication](./authentication) — how users and services authenticate.
-- [Authorization](./authorization) — RBAC and permission model.
+- [Authorization](./authorization) — RBAC, roles, permissions, schemas, APIs, organizations, Delta Labs role set.
 - [Secrets Management](./secrets-management) — storage and rotation.
 - [API Standards](../03-design-system/api-standards) — REST, auth, and conventions.
