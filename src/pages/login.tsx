@@ -22,8 +22,7 @@ export default function LoginPage(): JSX.Element {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = async () => {
     setSubmitting(true);
     setError(null);
 
@@ -68,7 +67,10 @@ export default function LoginPage(): JSX.Element {
         <div className="auth-card">
           <h1>Welcome back</h1>
           <p className="auth-card-subtitle">Sign in to access the Delta Labs documentation.</p>
-          <form onSubmit={handleSubmit}>
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+            }}>
             <div className="margin-bottom--md">
               <label htmlFor="email" className="auth-field-label">
                 Work email
@@ -100,7 +102,11 @@ export default function LoginPage(): JSX.Element {
               />
             </div>
             {error && <div className="auth-error">{error}</div>}
-            <button className="button button--primary auth-submit" type="submit" disabled={submitting}>
+            <button
+              className="button button--primary auth-submit"
+              type="button"
+              onClick={handleSubmit}
+              disabled={submitting}>
               {submitting ? 'Signing in…' : 'Sign in'}
             </button>
           </form>
