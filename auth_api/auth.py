@@ -2,6 +2,7 @@ from datetime import datetime, timedelta, timezone
 from typing import Any, Optional
 
 import jwt
+from bson import ObjectId
 from fastapi import Depends, HTTPException, status
 from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
 from passlib.context import CryptContext
@@ -76,7 +77,7 @@ async def get_current_user(
         )
 
     users_collection: Collection = await get_users_collection()
-    doc = await users_collection.find_one({"_id": token_data.user_id})
+    doc = await users_collection.find_one({"_id": ObjectId(token_data.user_id)})
     if not doc or not doc.get("is_active", True):
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,

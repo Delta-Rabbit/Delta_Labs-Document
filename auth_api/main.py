@@ -8,7 +8,7 @@ from pymongo.collection import Collection
 
 from .auth import create_access_token, get_current_user, get_password_hash, verify_password
 from .config import get_settings
-from .db import get_users_collection
+from .db import get_client, get_users_collection
 from .schemas import LoginRequest, Token, UserCreate, UserPublic
 
 app = FastAPI(title="Delta Labs Auth API", version="1.0.0")
@@ -27,6 +27,17 @@ app.add_middleware(
 @app.get("/health")
 async def health_check() -> dict[str, str]:
     return {"status": "ok"}
+
+
+@app.get("/health/db")
+async def health_check_db() -> dict[str, str]:
+    """Check if MongoDB is reachable. Use this to debug 500s on register/login."""
+    try:
+        client = get_client()
+        await client.admin.command("ping")
+        return {"status": "ok", "database": "connected"}
+    except Exception as e:
+        return {"status": "error", "detail": str(e)}
 
 
 @app.post("/auth/register", response_model=UserPublic, status_code=status.HTTP_201_CREATED)
