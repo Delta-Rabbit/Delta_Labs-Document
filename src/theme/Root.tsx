@@ -14,12 +14,19 @@ function ProtectedShell({ children }: { children: ReactNode }): JSX.Element {
   const location = useLocation();
   const { isAuthenticated, initialized, logout } = useAuth();
 
-  // Don't redirect until auth state has been initialized from storage
+  const isServer = typeof window === 'undefined';
+
+  // During static build (SSR), always render children so every page has full Layout and docusaurus_tag
+  if (isServer) {
+    return <>{children}</>;
+  }
+
+  // In browser: wait for auth to initialize before redirecting
   if (!initialized) {
     return null;
   }
 
-  if (typeof window !== 'undefined' && !isAuthenticated && !isPublicPath(location.pathname)) {
+  if (!isAuthenticated && !isPublicPath(location.pathname)) {
     window.location.href = '/login';
     return null;
   }
